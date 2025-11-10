@@ -13,10 +13,10 @@ type Field struct {
 }
 
 type Action struct {
-	Type	string   `json:"type"`
-	Text	string   `json:"text"`
-	Url 	string   `json:"url"`
-	Style 	string   `json:"style"`
+	Type  string `json:"type"`
+	Text  string `json:"text"`
+	Url   string `json:"url"`
+	Style string `json:"style"`
 }
 
 type Attachment struct {
@@ -52,6 +52,7 @@ type Payload struct {
 	UnfurlLinks bool         `json:"unfurl_links,omitempty"`
 	UnfurlMedia bool         `json:"unfurl_media,omitempty"`
 	Markdown    bool         `json:"mrkdwn,omitempty"`
+	ThreadTS    string       `json:"thread_ts,omitempty"`
 }
 
 func (attachment *Attachment) AddField(field Field) *Attachment {
